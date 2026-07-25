@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with us - We'd love to hear from you!">
+    <title>Contact Us - Foodie's Delight</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <i class="fas fa-utensils"></i>
+                        <span>Foodie's Delight</span>
+                    </a>
+                </div>
+
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="menu.html" class="nav-link">
+                            <i class="fas fa-book-open"></i> Menu
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-link">
+                            <i class="fas fa-shopping-cart"></i> Cart
+                            <span class="cart-badge" id="cartCount">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">
+                            <i class="fas fa-info-circle"></i> About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link active">
+                            <i class="fas fa-envelope"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="contact-hero-overlay">
+            <div class="container">
+                <div class="contact-hero-content">
+                    <span class="contact-hero-badge">
+                        <i class="fas fa-heart"></i> We're Here for You
+                    </span>
+                    <h1 class="contact-hero-title">
+                        Let's <span class="highlight">Connect</span>
+                    </h1>
+                    <p class="contact-hero-subtitle">
+                        We believe in the power of connection. Whether you have a question,
+                        a suggestion, or just want to say hello, we'd love to hear from you.
+                        Your voice matters to us!
+                    </p>
+                    <div class="contact-hero-message">
+                        <i class="fas fa-quote-left"></i>
+                        <em>"The best part of our day is hearing from our wonderful community.
+                            Every message, every call, every smile makes what we do worth it."</em>
+                        <span class="team-signature">— The Foodie's Delight Team</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information Cards -->
+    <section class="contact-info-cards">
+        <div class="container">
+            <div class="info-cards-grid">
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Give Us a Call</h3>
+                    <p class="info-detail">+1 (555) 123-4567</p>
+                    <p class="info-description">
+                        We're available 11 AM - 10 PM. Our team is always happy to help with
+                        orders, questions, or just to chat about food!
+                    </p>
+                    <div class="info-card-action">
+                        <span class="info-response-time">
+                            <i class="fas fa-clock"></i> Response within 5 minutes
+                        </span>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Send an Email</h3>
+                    <p class="info-detail">info@foodiesdelight.com</p>
+                    <p class="info-description">
+                        Prefer writing? Drop us an email and we'll get back to you within
+                        24 hours. We love reading your stories and feedback!
+                    </p>
+                    <div class="info-card-action">
+                        <span class="info-response-time">
+                            <i class="fas fa-clock"></i> Response within 24 hours
+                        </span>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Visit Us</h3>
+                    <p class="info-detail">123 Food Street</p>
+                    <p class="info-description">
+                        New York, NY 10001<br>
+                        Come say hi! We'd love to meet you in person and serve you
+                        something special.
+                    </p>
+                    <div class="info-card-action">
+                        <span class="info-response-time">
+                            <i class="fas fa-clock"></i> Open 11 AM - 10 PM
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Contact Section -->
+    <section class="contact-main">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-form-container">
+                    <div class="section-header">
+                        <span class="section-badge">Get in Touch</span>
+                        <h2>We'd Love to Hear <span class="highlight">From You</span></h2>
+                        <p>Whether it's feedback, a question, or just to say hello - we're all ears!</p>
+                    </div>
+
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">
+                                    <i class="fas fa-user"></i> Your Name
+                                    <span class="required">*</span>
+                                </label>
+                                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name"
+                                    required>
+                                <div class="form-hint">
+                                    <i class="fas fa-info-circle"></i>
+                                    We'll use this to personalize your experience
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">
+                                    <i class="fas fa-envelope"></i> Email Address
+                                    <span class="required">*</span>
+                                </label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email address"
+                                    required>
+                                <div class="form-hint">
+                                    <i class="fas fa-info-circle"></i>
+                                    We'll never share your email with anyone
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">
+                                    <i class="fas fa-phone"></i> Phone Number
+                                </label>
+                                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                                <div class="form-hint">
+                                    <i class="fas fa-info-circle"></i>
+                                    Only if you'd like a call back
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">
+                                    <i class="fas fa-tag"></i> Subject
+                                    <span class="required">*</span>
+                                </label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a subject...</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="order">Order Question</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="complaint">Complaint</option>
+                                    <option value="suggestion">Suggestion</option>
+                                    <option value="partnership">Partnership</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="message">
+                                <i class="fas fa-comment-dots"></i> Your Message
+                                <span class="required">*</span>
+                            </label>
+                            <textarea id="message" name="message" rows="6"
+                                placeholder="Tell us what's on your mind... We'd love to hear your story!"
+                                required></textarea>
+                            <div class="form-hint">
+                                <i class="fas fa-info-circle"></i>
+                                The more details, the better we can assist you
+                            </div>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <div class="form-options">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="newsletter" name="newsletter" checked>
+                                    <span class="checkmark"></span>
+                                    <span class="checkbox-text">
+                                        <i class="fas fa-newspaper"></i>
+                                        Subscribe to our newsletter for updates and special offers
+                                    </span>
+                                </label>
+
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="agree" name="agree" required>
+                                    <span class="checkmark"></span>
+                                    <span class="checkbox-text">
+                                        I agree to the <a href="#" target="_blank">privacy policy</a>
+                                        and <a href="#" target="_blank">terms of service</a>
+                                        <span class="required">*</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                                <span class="btn-loader" style="display: none;">
+                                    <i class="fas fa-spinner fa-spin"></i> Sending...
+                                </span>
+                            </button>
+                            <div class="form-success" style="display: none;">
+                                <i class="fas fa-check-circle"></i>
+                                <h3>Thank You!</h3>
+                                <p>Your message has been sent. We'll get back to you soon!</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Quick Connect Sidebar -->
+                <div class="quick-connect">
+                    <div class="quick-connect-content">
+                        <h3>
+                            <i class="fas fa-bolt"></i>
+                            Quick Connect
+                        </h3>
+                        <p>Need immediate assistance? We've got you covered!</p>
+
+                        <div class="quick-connect-item">
+                            <i class="fas fa-comment"></i>
+                            <div>
+                                <h4>Live Chat</h4>
+                                <p>Available 11 AM - 10 PM</p>
+                                <a href="#" class="quick-link">Start Chat <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="quick-connect-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p>+1 (555) 123-4567</p>
+                                <a href="#" class="quick-link">Message Us <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="quick-connect-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Call Us</h4>
+                                <p>+1 (555) 123-4567</p>
+                                <span class="quick-status">🟢 Available now</span>
+                            </div>
+                        </div>
+
+                        <div class="quick-social">
+                            <h4>Follow Us</h4>
+                            <div class="social-icons">
+                                <a href="#" aria-label="Facebook" class="social-icon">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" aria-label="Instagram" class="social-icon">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" aria-label="Twitter" class="social-icon">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" aria-label="YouTube" class="social-icon">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="#" aria-label="TikTok" class="social-icon">
+                                    <i class="fab fa-tiktok"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="contact-map">
+        <div class="container">
+            <div class="map-wrapper">
+                <div class="map-content">
+                    <div class="map-info">
+                        <span class="map-badge">
+                            <i class="fas fa-location-dot"></i> Find Us
+                        </span>
+                        <h3>Come Visit Our Restaurant</h3>
+                        <p>We're located in the heart of the food district. Look for the beautiful
+                            mural on the wall - you can't miss us!</p>
+                        <ul class="map-details">
+                            <li>
+                                <i class="fas fa-map-pin"></i>
+                                <span>123 Food Street, New York, NY 10001</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <span>Mon-Fri: 11:00 AM - 10:00 PM</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <span>Sat-Sun: 12:00 PM - 11:00 PM</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-parking"></i>
+                                <span>Free parking available</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-primary btn-map">
+                            <i class="fas fa-directions"></i> Get Directions
+                        </a>
+                    </div>
+                    <div class="map-placeholder">
+                        <div class="map-image">
+                            <img src="assets/images/map-placeholder.jpg" alt="Restaurant Location Map" loading="lazy">
+                            <div class="map-marker">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>You are here</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section class="contact-faqs">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">FAQ</span>
+                <h2>Frequently Asked <span class="highlight">Questions</span></h2>
+                <p>Quick answers to things our customers often ask</p>
+            </div>
+
+            <div class="faqs-grid">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>
+                            <i class="fas fa-utensils"></i>
+                            How do I place an order?
+                        </h4>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Simply browse our <a href="menu.html">menu</a>, select your favorite dishes,
+                            add them to your cart, and proceed to checkout. It's that easy!
+                            You can also call us directly to place your order.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>
+                            <i class="fas fa-truck"></i>
+                            How long does delivery take?
+                        </h4>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We aim to deliver within 30-45 minutes. During peak hours, it might take
+                            up to an hour. We always prioritize getting your food to you hot and fresh!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>
+                            <i class="fas fa-leaf"></i>
+                            Do you have vegetarian/vegan options?
+                        </h4>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We have a dedicated section for vegetarian and vegan dishes.
+                            We also have gluten-free options available. Just check our <a href="menu.html">menu</a>
+                            for items marked with special tags.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>
+                            <i class="fas fa-credit-card"></i>
+                            What payment methods do you accept?
+                        </h4>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept all major credit cards (Visa, Mastercard, American Express),
+                            PayPal, Apple Pay, Google Pay, and cash on delivery.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>
+                            <i class="fas fa-gift"></i>
+                            Do you offer catering for events?
+                        </h4>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We offer catering services for corporate events, private parties,
+                            weddings, and more. Contact us directly to discuss your event needs
+                            and get a custom quote.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>
+                            <i class="fas fa-star"></i>
+                            Can I customize my order?
+                        </h4>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Of course! We love making things just the way you like them.
+                            Just leave a note in the special instructions when ordering,
+                            or call us directly with your preferences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-logo">
+                        <i class="fas fa-utensils"></i>
+                        Foodie's Delight
+                    </h3>
+                    <p>Delivering happiness through delicious food since 2020.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="menu.html"><i class="fas fa-chevron-right"></i> Menu</a></li>
+                        <li><a href="cart.html"><i class="fas fa-chevron-right"></i> Cart</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            123 Food Street, New York, NY 10001
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            +1 (555) 123-4567
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            info@foodiesdelight.com
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Opening Hours</h4>
+                    <ul class="hours">
+                        <li><span>Mon - Fri:</span> 11:00 AM - 10:00 PM</li>
+                        <li><span>Saturday:</span> 12:00 PM - 11:00 PM</li>
+                        <li><span>Sunday:</span> 12:00 PM - 9:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Foodie's Delight. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // FAQ Toggle Function
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+
+            // Close all FAQs
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Open clicked FAQ if it wasn't open
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+
+        // Contact Form Submission
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('contactForm');
+            if (form) {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    // Show loading state
+                    const submitBtn = this.querySelector('.btn-submit');
+                    const btnText = submitBtn.querySelector('.btn-text');
+                    const loader = submitBtn.querySelector('.btn-loader');
+
+                    submitBtn.disabled = true;
+                    loader.style.display = 'inline-block';
+
+                    // Simulate form submission
+                    setTimeout(() => {
+                        // Hide form, show success
+                        const formFields = this.querySelectorAll('.form-row, .full-width:not(:last-child)');
+                        formFields.forEach(field => {
+                            field.style.display = 'none';
+                        });
+
+                        submitBtn.style.display = 'none';
+                        this.querySelector('.form-success').style.display = 'block';
+
+                        // Reset form after 5 seconds (optional)
+                        setTimeout(() => {
+                            this.reset();
+                            formFields.forEach(field => {
+                                field.style.display = '';
+                            });
+                            submitBtn.style.display = '';
+                            loader.style.display = 'none';
+                            submitBtn.disabled = false;
+                            this.querySelector('.form-success').style.display = 'none';
+                        }, 5000);
+                    }, 2000);
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

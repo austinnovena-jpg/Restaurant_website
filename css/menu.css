@@ -1,0 +1,1536 @@
+/* menu.css - Menu page specific styles with a personal touch */
+
+/* Import Google Fonts for extra personality */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* ============================================
+   MENU HERO SECTION - WELCOME TO OUR STORY
+   ============================================ */
+
+.menu-hero {
+    position: relative;
+    background: linear-gradient(135deg, #2d1b69 0%, #11998e 100%);
+    padding: 80px 0;
+    overflow: hidden;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+/* Decorative floating elements */
+.menu-hero::before {
+    content: '🍽️';
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    font-size: 4rem;
+    opacity: 0.1;
+    animation: float 6s ease-in-out infinite;
+}
+
+.menu-hero::after {
+    content: '❤️';
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    font-size: 3rem;
+    opacity: 0.1;
+    animation: float 8s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+}
+
+/* Additional decorative elements */
+.menu-hero .deco-dot {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.menu-hero .deco-dot:nth-child(1) {
+    width: 200px;
+    height: 200px;
+    top: -80px;
+    right: -40px;
+}
+
+.menu-hero .deco-dot:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    bottom: -60px;
+    left: -30px;
+}
+
+.menu-hero-overlay {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.menu-hero-content {
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.menu-hero-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 10px 28px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: fadeInDown 0.8s ease;
+}
+
+.menu-hero-badge i {
+    color: #ffd93d;
+    margin-right: 8px;
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.menu-hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    animation: fadeInUp 0.8s ease;
+    font-family: 'Playfair Display', serif;
+}
+
+.menu-hero-title .highlight {
+    background: linear-gradient(135deg, #ffd93d 0%, #ff6b6b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+
+.menu-hero-title .highlight::after {
+    content: '✨';
+    position: absolute;
+    top: -20px;
+    right: -30px;
+    font-size: 1.5rem;
+    -webkit-text-fill-color: initial;
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+
+    0%,
+    100% {
+        opacity: 0.5;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+.menu-hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.95;
+    line-height: 1.8;
+    animation: fadeInUp 1s ease;
+    font-weight: 300;
+}
+
+.menu-hero-message {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 25px 35px;
+    border-radius: 15px;
+    margin: 30px 0;
+    border-left: 4px solid #ffd93d;
+    animation: fadeInUp 1.2s ease;
+    position: relative;
+}
+
+.menu-hero-message::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    font-size: 3rem;
+    color: rgba(255, 215, 0, 0.3);
+    font-family: 'Georgia', serif;
+}
+
+.menu-hero-message i {
+    color: #ffd93d;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.menu-hero-message em {
+    font-style: italic;
+    font-size: 1.1rem;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 400;
+}
+
+.chef-signature {
+    display: block;
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    opacity: 0.8;
+    font-family: 'Poppins', sans-serif;
+}
+
+.chef-signature::before {
+    content: '— ';
+}
+
+.menu-hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+    animation: fadeInUp 1.4s ease;
+}
+
+.menu-hero-stats .stat-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.menu-hero-stats .stat-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+.menu-hero-stats .stat-item i {
+    font-size: 1.2rem;
+    color: #ffd93d;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   CATEGORY FILTERS - EXPLORE OUR STORIES
+   ============================================ */
+
+.menu-categories {
+    padding: 60px 0 40px;
+    background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.menu-categories .section-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.menu-categories .section-header .section-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 5px 20px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.menu-categories .section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2d3436;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.menu-categories .section-header p {
+    color: #636e72;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.category-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.category-btn {
+    padding: 12px 26px;
+    border: 2px solid #e0e0e0;
+    background: white;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    transition: left 0.3s ease;
+}
+
+.category-btn:hover::before {
+    left: 0;
+}
+
+.category-btn i {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.category-btn:hover {
+    border-color: #667eea;
+    color: #667eea;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+}
+
+.category-btn:hover i {
+    transform: scale(1.2);
+}
+
+.category-btn.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: #667eea;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.category-btn.active i {
+    transform: scale(1.1);
+}
+
+/* ============================================
+   MENU ITEMS SECTION - OUR CULINARY STORIES
+   ============================================ */
+
+.menu-items-section {
+    padding: 60px 0 80px;
+    background: white;
+}
+
+.menu-items-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.menu-items-title h3 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    color: #2d3436;
+    font-family: 'Playfair Display', serif;
+}
+
+.menu-items-title h3::before {
+    content: '🍽️ ';
+    font-size: 1.5rem;
+}
+
+.menu-items-title p {
+    color: #636e72;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.menu-view-options {
+    display: flex;
+    gap: 10px;
+}
+
+.view-btn {
+    padding: 10px 15px;
+    border: 2px solid #e0e0e0;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    color: #636e72;
+}
+
+.view-btn:hover {
+    border-color: #667eea;
+    color: #667eea;
+    transform: translateY(-2px);
+}
+
+.view-btn.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: #667eea;
+}
+
+/* ============================================
+   MENU GRID - EACH CARD TELLS A STORY
+   ============================================ */
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.menu-grid.list-view {
+    grid-template-columns: 1fr;
+}
+
+.menu-item-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    border: 1px solid #f0f0f0;
+    position: relative;
+}
+
+.menu-item-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.menu-item-card:hover::after {
+    transform: scaleX(1);
+}
+
+.menu-item-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.menu-item-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    background: #f0f0f0;
+}
+
+.menu-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.menu-item-card:hover .menu-item-image img {
+    transform: scale(1.08);
+}
+
+/* Image overlay with story */
+.menu-item-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+}
+
+.menu-item-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 2;
+    animation: slideInRight 0.5s ease;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.menu-item-badge.bestseller {
+    background: linear-gradient(135deg, #ffd93d 0%, #ff6b6b 100%);
+    color: #2d3436;
+}
+
+.menu-item-badge.vegetarian {
+    background: linear-gradient(135deg, #a8e063 0%, #56ab2f 100%);
+    color: white;
+}
+
+.menu-item-badge.spicy {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+.menu-item-badge.chef-recommend {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+/* Special story badge on image */
+.menu-item-story-badge {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    padding: 6px 14px;
+    border-radius: 50px;
+    color: white;
+    font-size: 0.75rem;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.menu-item-story-badge i {
+    color: #ffd93d;
+}
+
+.menu-item-content {
+    padding: 22px 25px;
+    position: relative;
+}
+
+/* Personal touch - chef's note on hover */
+.menu-item-content::before {
+    content: '👨‍🍳';
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    font-size: 2rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform: rotate(-15deg);
+}
+
+.menu-item-card:hover .menu-item-content::before {
+    opacity: 0.8;
+    transform: rotate(0deg);
+}
+
+.menu-item-content .item-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #2d3436;
+    font-family: 'Playfair Display', serif;
+}
+
+.menu-item-content .item-name::after {
+    content: ' ✨';
+    color: #ffd93d;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-item-card:hover .item-name::after {
+    opacity: 1;
+}
+
+.menu-item-content .item-description {
+    color: #636e72;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    min-height: 50px;
+}
+
+/* Item story note */
+.item-story-note {
+    display: none;
+    background: #f8f9fa;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 0.85rem;
+    color: #636e72;
+    border-left: 3px solid #667eea;
+    font-style: italic;
+    transition: all 0.3s ease;
+}
+
+.menu-item-card:hover .item-story-note {
+    display: block;
+    animation: fadeInUp 0.3s ease;
+}
+
+.item-story-note i {
+    color: #ffd93d;
+    margin-right: 6px;
+}
+
+.menu-item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.menu-item-price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #667eea;
+    font-family: 'Playfair Display', serif;
+}
+
+.menu-item-price .currency {
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.menu-item-price .price-story {
+    display: block;
+    font-size: 0.7rem;
+    color: #636e72;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 2px;
+}
+
+.add-to-cart-btn {
+    padding: 10px 22px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.add-to-cart-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.add-to-cart-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.add-to-cart-btn:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.add-to-cart-btn i {
+    font-size: 0.9rem;
+    position: relative;
+    z-index: 1;
+}
+
+.add-to-cart-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Added to cart animation */
+.add-to-cart-btn.added {
+    background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%);
+}
+
+.add-to-cart-btn.added i {
+    animation: bounceIn 0.5s ease;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ============================================
+   LIST VIEW STYLES
+   ============================================ */
+
+.menu-grid.list-view .menu-item-card {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.menu-grid.list-view .menu-item-image {
+    width: 250px;
+    height: 250px;
+    flex-shrink: 0;
+}
+
+.menu-grid.list-view .menu-item-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu-grid.list-view .item-story-note {
+    display: block;
+}
+
+/* ============================================
+   MENU MESSAGE - A FRIENDLY NOTE
+   ============================================ */
+
+.menu-message {
+    margin-top: 50px;
+    padding: 35px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #f0f0f0 100%);
+    border-radius: 15px;
+    text-align: center;
+    border: 2px dashed #d0d0d0;
+}
+
+.message-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.message-content i {
+    font-size: 2.5rem;
+    color: #ffd93d;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.message-content p {
+    font-size: 1.1rem;
+    color: #2d3436;
+}
+
+.message-content p::before {
+    content: '💡 ';
+}
+
+.message-content a {
+    color: #667eea;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+}
+
+.message-content a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    transition: width 0.3s ease;
+}
+
+.message-content a:hover::after {
+    width: 100%;
+}
+
+/* ============================================
+   CHEF'S SPECIAL SECTION - HEART OF THE KITCHEN
+   ============================================ */
+
+.chef-special {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative elements */
+.chef-special::before {
+    content: '👨‍🍳';
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    font-size: 8rem;
+    opacity: 0.05;
+}
+
+.chef-special::after {
+    content: '🍲';
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 6rem;
+    opacity: 0.05;
+}
+
+.chef-special-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.chef-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #ffd93d 0%, #ff6b6b 100%);
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #2d3436;
+    margin-bottom: 20px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.chef-special-text h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-family: 'Playfair Display', serif;
+}
+
+.chef-special-text h2 .highlight {
+    background: linear-gradient(135deg, #ffd93d 0%, #ff6b6b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+
+.chef-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    opacity: 0.9;
+    margin-bottom: 30px;
+    font-style: italic;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.3rem;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    border-left: 4px solid #ffd93d;
+}
+
+.btn-chef {
+    background: linear-gradient(135deg, #ffd93d 0%, #ff6b6b 100%);
+    color: #2d3436;
+    margin-top: 10px;
+    padding: 14px 35px;
+    font-weight: 700;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-chef:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+}
+
+.btn-chef i {
+    transition: transform 0.3s ease;
+}
+
+.btn-chef:hover i {
+    transform: scale(1.2);
+}
+
+.chef-special-image {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.chef-special-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.chef-special-image:hover img {
+    transform: scale(1.05);
+}
+
+.chef-tag {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 2px solid #ffd93d;
+    animation: float 3s ease-in-out infinite;
+}
+
+.chef-tag i {
+    color: #ffd93d;
+    margin-right: 8px;
+}
+
+/* ============================================
+   CUSTOMER STORIES - REAL PEOPLE, REAL LOVE
+   ============================================ */
+
+.customer-stories {
+    padding: 80px 0;
+    background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.story-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+    transition: all 0.4s ease;
+    border: 1px solid #f0f0f0;
+    position: relative;
+}
+
+.story-card::before {
+    content: '"';
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 4rem;
+    color: #667eea;
+    opacity: 0.1;
+    font-family: 'Georgia', serif;
+}
+
+.story-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+    border-color: #667eea;
+}
+
+.story-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.story-header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #667eea;
+    padding: 2px;
+}
+
+.story-header h4 {
+    margin-bottom: 2px;
+    color: #2d3436;
+    font-family: 'Playfair Display', serif;
+}
+
+.story-location {
+    font-size: 0.85rem;
+    color: #636e72;
+}
+
+.story-location::before {
+    content: '📍 ';
+}
+
+.story-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #2d3436;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.story-dish {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+    font-size: 0.9rem;
+    color: #636e72;
+}
+
+.story-dish i {
+    color: #667eea;
+}
+
+/* ============================================
+   MENU CTA - YOUR TABLE AWAITS
+   ============================================ */
+
+.menu-cta {
+    padding: 80px 0;
+    background: white;
+}
+
+.cta-box {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 60px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cta-box::before {
+    content: '🍽️';
+    position: absolute;
+    bottom: -30px;
+    right: -20px;
+    font-size: 12rem;
+    opacity: 0.05;
+}
+
+.cta-box::after {
+    content: '❤️';
+    position: absolute;
+    top: -20px;
+    left: 30px;
+    font-size: 8rem;
+    opacity: 0.05;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 600px;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+}
+
+.cta-content h2 i {
+    color: #ffd93d;
+    margin-right: 10px;
+}
+
+.cta-content p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.cta-features {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.cta-features span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+}
+
+.cta-features i {
+    color: #ffd93d;
+    animation: checkPop 1s ease infinite;
+}
+
+@keyframes checkPop {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.cta-buttons .btn-primary {
+    background: white;
+    color: #667eea;
+    padding: 14px 35px;
+    font-weight: 700;
+}
+
+.cta-buttons .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cta-buttons .btn-outline {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cta-buttons .btn-outline:hover {
+    background: white;
+    color: #667eea;
+    transform: translateY(-3px);
+}
+
+.cta-emoji {
+    position: relative;
+    z-index: 2;
+    font-size: 8rem;
+    color: rgba(255, 255, 255, 0.1);
+    animation: float 4s ease-in-out infinite;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - EVERY DEVICE MATTERS
+   ============================================ */
+
+/* Tablets and small laptops */
+@media (max-width: 1024px) {
+    .chef-special-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .chef-special-image img {
+        height: 300px;
+    }
+
+    .cta-box {
+        padding: 40px;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .menu-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .menu-hero-stats {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .menu-hero-stats .stat-item {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .category-filters {
+        gap: 8px;
+    }
+
+    .category-btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+        flex: 1 1 calc(50% - 8px);
+        justify-content: center;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 20px;
+    }
+
+    .menu-grid.list-view .menu-item-card {
+        flex-direction: column;
+    }
+
+    .menu-grid.list-view .menu-item-image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .cta-box {
+        padding: 40px 30px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+
+    .cta-features {
+        justify-content: center;
+    }
+
+    .cta-buttons {
+        justify-content: center;
+    }
+
+    .cta-emoji {
+        display: none;
+    }
+
+    .menu-items-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-hero-message {
+        padding: 20px;
+    }
+
+    .menu-hero-message em {
+        font-size: 1rem;
+    }
+
+    .chef-special-text h2 {
+        font-size: 2rem;
+    }
+
+    .chef-description {
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    .story-card {
+        padding: 20px;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .menu-hero {
+        padding: 60px 0;
+    }
+
+    .menu-hero-title {
+        font-size: 2rem;
+    }
+
+    .menu-hero-title .highlight::after {
+        display: none;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-btn {
+        flex: 1 1 100%;
+    }
+
+    .menu-item-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .cta-box {
+        padding: 30px 20px;
+    }
+
+    .cta-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .cta-features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-buttons .btn-primary,
+    .cta-buttons .btn-outline {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .chef-special-image img {
+        height: 200px;
+    }
+
+    .chef-tag {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+
+    .stories-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .story-header img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Very small devices */
+@media (max-width: 350px) {
+    .menu-hero-title {
+        font-size: 1.6rem;
+    }
+
+    .menu-item-content {
+        padding: 15px;
+    }
+
+    .menu-item-footer {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+
+    .add-to-cart-btn {
+        justify-content: center;
+    }
+}
+
+/* ============================================
+   PRINT STYLES - FOR THOSE WHO LOVE PAPER MENUS
+   ============================================ */
+
+@media print {
+    .menu-hero {
+        background: white !important;
+        color: black !important;
+        padding: 40px 0;
+    }
+
+    .menu-hero-content {
+        color: black !important;
+    }
+
+    .menu-hero-title .highlight {
+        -webkit-text-fill-color: #2d3436;
+        background: none;
+    }
+
+    .category-btn {
+        border: 1px solid #ccc;
+        background: white !important;
+        color: black !important;
+    }
+
+    .category-btn.active {
+        background: #f0f0f0 !important;
+        color: black !important;
+    }
+
+    .menu-item-card {
+        break-inside: avoid;
+        box-shadow: none !important;
+        border: 1px solid #ddd;
+    }
+
+    .menu-item-card:hover {
+        transform: none !important;
+    }
+
+    .add-to-cart-btn,
+    .menu-view-options,
+    .menu-message,
+    .cta-box,
+    .chef-special,
+    .customer-stories,
+    .menu-cta {
+        display: none !important;
+    }
+}
+
+/* ============================================
+   UTILITY CLASSES - EXTRA PERSONAL TOUCHES
+   ============================================ */
+
+/* Heartbeat animation for food items */
+.food-heartbeat {
+    animation: heartbeat 2s ease-in-out infinite;
+}
+
+/* Warm glow effect */
+.warm-glow {
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.1);
+}
+
+/* Personal note tag */
+.personal-note {
+    background: #f8f9fa;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: #636e72;
+    border-left: 3px solid #ffd93d;
+    margin-top: 10px;
+}
+
+.personal-note i {
+    color: #ffd93d;
+    margin-right: 6px;
+}

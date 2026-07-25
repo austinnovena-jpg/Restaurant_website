@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Delicious food delivered to your doorstep - Order your favorite meals online">
+    <title>Foodie's Delight - Restaurant Food Order</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <i class="fas fa-utensils"></i>
+                        <span>Foodie's Delight</span>
+                    </a>
+                </div>
+
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="menu.html" class="nav-link">
+                            <i class="fas fa-book-open"></i> Menu
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-link">
+                            <i class="fas fa-shopping-cart"></i> Cart
+                            <span class="cart-badge" id="cartCount">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">
+                            <i class="fas fa-info-circle"></i> About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">
+                            <i class="fas fa-envelope"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="highlight">Delicious</span> Food,
+                        <span class="highlight">Delivered</span> Fast
+                    </h1>
+                    <p class="hero-subtitle">
+                        Experience the best culinary delights from our kitchen to your doorstep.
+                        Fresh ingredients, authentic recipes, and unforgettable flavors.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="menu.html" class="btn btn-primary">
+                            <i class="fas fa-utensil-spoon"></i> Order Now
+                        </a>
+                        <a href="menu.html" class="btn btn-secondary">
+                            <i class="fas fa-eye"></i> View Menu
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Delicious Items</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">Happy Customers</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">30min</span>
+                            <span class="stat-label">Delivery Time</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/images/hero-bg.jpg" alt="Delicious Food" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Why Choose Us</span>
+                <h2>What Makes Us Special</h2>
+                <p>We bring the restaurant experience to your home</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-pizza-slice"></i>
+                    </div>
+                    <h3>Fresh Ingredients</h3>
+                    <p>We source only the freshest and highest quality ingredients for every dish.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>Quick and reliable delivery to ensure your food arrives hot and fresh.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Premium Quality</h3>
+                    <p>Every dish is prepared with passion and attention to detail.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Easy Payment</h3>
+                    <p>Multiple secure payment options for your convenience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Menu Items -->
+    <section class="popular-items">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Our Menu</span>
+                <h2>Popular Dishes</h2>
+                <p>Most loved items by our customers</p>
+            </div>
+            <div class="menu-grid" id="popularMenu">
+                <!-- Items will be loaded by JavaScript -->
+            </div>
+            <div class="view-all-container">
+                <a href="menu.html" class="btn btn-primary">
+                    <i class="fas fa-eye"></i> View Full Menu
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Testimonials</span>
+                <h2>What Our Customers Say</h2>
+                <p>Real reviews from real food lovers</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Amazing food! The delivery was super fast and the quality was excellent.
+                        Will definitely order again!"
+                    </p>
+                    <div class="testimonial-author">
+                        <i class="fas fa-user-circle"></i>
+                        <div>
+                            <h4>John Doe</h4>
+                            <span>Regular Customer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "The best restaurant delivery service I've ever used. The food is always
+                        delicious and the portions are generous."
+                    </p>
+                    <div class="testimonial-author">
+                        <i class="fas fa-user-circle"></i>
+                        <div>
+                            <h4>Jane Smith</h4>
+                            <span>Food Enthusiast</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Excellent service and incredible food. The website is easy to use and
+                        the checkout process is seamless."
+                    </p>
+                    <div class="testimonial-author">
+                        <i class="fas fa-user-circle"></i>
+                        <div>
+                            <h4>Mike Johnson</h4>
+                            <span>Happy Customer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Order?</h2>
+                <p>Get your favorite food delivered right to your door. Order now and enjoy!</p>
+                <a href="menu.html" class="btn btn-primary">
+                    <i class="fas fa-shopping-bag"></i> Start Ordering
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-logo">
+                        <i class="fas fa-utensils"></i>
+                        Foodie's Delight
+                    </h3>
+                    <p>Delivering happiness through delicious food since 2020.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="menu.html"><i class="fas fa-chevron-right"></i> Menu</a></li>
+                        <li><a href="cart.html"><i class="fas fa-chevron-right"></i> Cart</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            123 Food Street, New York, NY 10001
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            +1 (555) 123-4567
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            info@foodiesdelight.com
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Opening Hours</h4>
+                    <ul class="hours">
+                        <li><span>Mon - Fri:</span> 11:00 AM - 10:00 PM</li>
+                        <li><span>Saturday:</span> 12:00 PM - 11:00 PM</li>
+                        <li><span>Sunday:</span> 12:00 PM - 9:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Foodie's Delight. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

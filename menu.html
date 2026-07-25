@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our delicious menu - Each dish tells a story of love and tradition">
+    <title>Our Menu - Foodie's Delight</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <i class="fas fa-utensils"></i>
+                        <span>Foodie's Delight</span>
+                    </a>
+                </div>
+
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="menu.html" class="nav-link active">
+                            <i class="fas fa-book-open"></i> Menu
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-link">
+                            <i class="fas fa-shopping-cart"></i> Cart
+                            <span class="cart-badge" id="cartCount">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">
+                            <i class="fas fa-info-circle"></i> About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">
+                            <i class="fas fa-envelope"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Menu Hero Section - Personal Welcome -->
+    <section class="menu-hero">
+        <div class="menu-hero-overlay">
+            <div class="container">
+                <div class="menu-hero-content">
+                    <span class="menu-hero-badge">
+                        <i class="fas fa-heart"></i> Made with Love
+                    </span>
+                    <h1 class="menu-hero-title">
+                        Our <span class="highlight">Story</span> on a Plate
+                    </h1>
+                    <p class="menu-hero-subtitle">
+                        Every dish tells a story. From our grandmother's secret recipes to our chef's
+                        modern twists, each bite carries memories, passion, and a dash of soul.
+                    </p>
+                    <div class="menu-hero-message">
+                        <i class="fas fa-quote-left"></i>
+                        <em>"Cooking is love made visible, and we can't wait to share it with you."</em>
+                        <span class="chef-signature">— Chef Maria</span>
+                    </div>
+                    <div class="menu-hero-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-utensil-spoon"></i>
+                            <span>50+ Dishes</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Fresh Daily</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-leaf"></i>
+                            <span>Seasonal Ingredients</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Categories - With Personal Descriptions -->
+    <section class="menu-categories">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Explore</span>
+                <h2>What Are You Craving Today?</h2>
+                <p>Each category tells a different story from our kitchen</p>
+            </div>
+            <div class="category-filters" id="categoryFilters">
+                <button class="category-btn active" data-category="all">
+                    <i class="fas fa-th-large"></i> All
+                </button>
+                <button class="category-btn" data-category="appetizers">
+                    <i class="fas fa-utensils"></i> Appetizers
+                </button>
+                <button class="category-btn" data-category="main-course">
+                    <i class="fas fa-utensil-spoon"></i> Main Course
+                </button>
+                <button class="category-btn" data-category="pasta">
+                    <i class="fas fa-pizza-slice"></i> Pasta
+                </button>
+                <button class="category-btn" data-category="seafood">
+                    <i class="fas fa-fish"></i> Seafood
+                </button>
+                <button class="category-btn" data-category="desserts">
+                    <i class="fas fa-cake"></i> Desserts
+                </button>
+                <button class="category-btn" data-category="beverages">
+                    <i class="fas fa-coffee"></i> Beverages
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Items Grid -->
+    <section class="menu-items-section">
+        <div class="container">
+            <div class="menu-items-header">
+                <div class="menu-items-title">
+                    <h3 id="categoryTitle">All Delights</h3>
+                    <p id="categoryDescription">Every dish crafted with passion and served with a smile</p>
+                </div>
+                <div class="menu-view-options">
+                    <button class="view-btn active" data-view="grid" title="Grid View">
+                        <i class="fas fa-th"></i>
+                    </button>
+                    <button class="view-btn" data-view="list" title="List View">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="menu-grid" id="menuItems">
+                <!-- Items will be dynamically loaded -->
+            </div>
+
+            <div class="menu-message">
+                <div class="message-content">
+                    <i class="fas fa-smile-wink"></i>
+                    <p>Can't decide? Ask our chef for a recommendation! <a href="contact.html">We're here to help</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chef's Special Section - Human Touch -->
+    <section class="chef-special">
+        <div class="container">
+            <div class="chef-special-content">
+                <div class="chef-special-text">
+                    <span class="chef-badge">
+                        <i class="fas fa-crown"></i> Chef's Special
+                    </span>
+                    <h2>This Week's <span class="highlight">Masterpiece</span></h2>
+                    <p class="chef-description">
+                        "I remember my grandmother making this dish on Sunday afternoons.
+                        The aroma would fill the entire house, bringing the whole family together.
+                        Today, I'm sharing that same warmth with you."
+                    </p>
+                    <div class="chef-special-item" id="chefSpecial">
+                        <!-- Loaded dynamically -->
+                    </div>
+                    <a href="#" class="btn btn-primary btn-chef">
+                        <i class="fas fa-heart"></i> Try It Today
+                    </a>
+                </div>
+                <div class="chef-special-image">
+                    <img src="assets/images/chef-special.jpg" alt="Chef's Special Dish" loading="lazy">
+                    <div class="chef-tag">
+                        <i class="fas fa-star"></i> Chef's Signature
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Stories Section -->
+    <section class="customer-stories">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Love Notes</span>
+                <h2>What Our Customers Say About Our Food</h2>
+                <p>Real stories from our community</p>
+            </div>
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-header">
+                        <img src="assets/images/customer1.jpg" alt="Sarah's story" loading="lazy">
+                        <div>
+                            <h4>Sarah & Family</h4>
+                            <span class="story-location">📍 Downtown</span>
+                        </div>
+                    </div>
+                    <p class="story-text">
+                        "The pasta reminded me of my trip to Italy! The flavors were so authentic
+                        and the service was incredible. My kids loved it too!"
+                    </p>
+                    <div class="story-dish">
+                        <i class="fas fa-utensils"></i>
+                        <span>Ordered: Truffle Pasta</span>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="story-header">
+                        <img src="assets/images/customer2.jpg" alt="Mark's story" loading="lazy">
+                        <div>
+                            <h4>Mark</h4>
+                            <span class="story-location">📍 Riverside</span>
+                        </div>
+                    </div>
+                    <p class="story-text">
+                        "Being a vegetarian, I appreciate how many amazing options they have.
+                        The grilled vegetables were the best I've ever had!"
+                    </p>
+                    <div class="story-dish">
+                        <i class="fas fa-utensils"></i>
+                        <span>Ordered: Grilled Veggie Platter</span>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="story-header">
+                        <img src="assets/images/customer3.jpg" alt="Emma's story" loading="lazy">
+                        <div>
+                            <h4>Emma</h4>
+                            <span class="story-location">📍 City Center</span>
+                        </div>
+                    </div>
+                    <p class="story-text">
+                        "I ordered for a dinner party and everyone raved about the food!
+                        The presentation was beautiful and the taste was even better."
+                    </p>
+                    <div class="story-dish">
+                        <i class="fas fa-utensils"></i>
+                        <span>Ordered: Seafood Platter</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personalized Call to Action -->
+    <section class="menu-cta">
+        <div class="container">
+            <div class="cta-box">
+                <div class="cta-content">
+                    <h2>
+                        <i class="fas fa-hands-helping"></i>
+                        Let Us Cook for You Tonight
+                    </h2>
+                    <p>
+                        Whether it's a quiet dinner for two, a family celebration, or just because
+                        you deserve something special - we're here to make your evening delicious.
+                    </p>
+                    <div class="cta-features">
+                        <span><i class="fas fa-check-circle"></i> Fresh ingredients</span>
+                        <span><i class="fas fa-check-circle"></i> Made to order</span>
+                        <span><i class="fas fa-check-circle"></i> Free delivery</span>
+                    </div>
+                    <div class="cta-buttons">
+                        <a href="cart.html" class="btn btn-primary">
+                            <i class="fas fa-shopping-bag"></i> Start Your Order
+                        </a>
+                        <a href="contact.html" class="btn btn-outline">
+                            <i class="fas fa-comment"></i> Ask About Customization
+                        </a>
+                    </div>
+                </div>
+                <div class="cta-emoji">
+                    <i class="fas fa-utensils"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-logo">
+                        <i class="fas fa-utensils"></i>
+                        Foodie's Delight
+                    </h3>
+                    <p>Delivering happiness through delicious food since 2020.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="menu.html"><i class="fas fa-chevron-right"></i> Menu</a></li>
+                        <li><a href="cart.html"><i class="fas fa-chevron-right"></i> Cart</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            123 Food Street, New York, NY 10001
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            +1 (555) 123-4567
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            info@foodiesdelight.com
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Opening Hours</h4>
+                    <ul class="hours">
+                        <li><span>Mon - Fri:</span> 11:00 AM - 10:00 PM</li>
+                        <li><span>Saturday:</span> 12:00 PM - 11:00 PM</li>
+                        <li><span>Sunday:</span> 12:00 PM - 9:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Foodie's Delight. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/utils.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
