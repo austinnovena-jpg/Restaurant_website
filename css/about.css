@@ -1,0 +1,1239 @@
+/* about.css - About page specific styles with a personal touch */
+
+/* ============================================
+   ABOUT HERO - Our story begins here
+   ============================================ */
+
+.about-hero {
+    position: relative;
+    background: linear-gradient(135deg, #2d1b69 0%, #11998e 100%);
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.about-hero::before {
+    content: '📖';
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 5rem;
+    opacity: 0.1;
+    animation: float 6s ease-in-out infinite;
+}
+
+.about-hero::after {
+    content: '❤️';
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    font-size: 4rem;
+    opacity: 0.1;
+    animation: float 8s ease-in-out infinite reverse;
+}
+
+.about-hero-overlay {
+    position: relative;
+    z-index: 2;
+}
+
+.about-hero-content {
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-hero-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 10px 28px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: fadeInDown 0.8s ease;
+}
+
+.about-hero-badge i {
+    color: #ffd93d;
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+.about-hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    font-family: 'Playfair Display', serif;
+    animation: fadeInUp 0.8s ease;
+}
+
+.about-hero-title .highlight {
+    background: linear-gradient(135deg, #ffd93d 0%, #ff6b6b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.about-hero-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.95;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease;
+}
+
+.about-hero-quote {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 25px 35px;
+    border-radius: 15px;
+    border-left: 4px solid #ffd93d;
+    animation: fadeInUp 1.2s ease;
+}
+
+.about-hero-quote i {
+    color: #ffd93d;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.about-hero-quote em {
+    font-style: italic;
+    font-size: 1.1rem;
+    font-family: 'Dancing Script', cursive;
+}
+
+.quote-author {
+    display: block;
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+.quote-author::before {
+    content: '— ';
+}
+
+/* ============================================
+   OUR STORY SECTION
+   ============================================ */
+
+.our-story {
+    padding: 80px 0;
+    background: white;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.story-image-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.story-image-wrapper img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.story-image-wrapper:hover img {
+    transform: scale(1.03);
+}
+
+.story-image-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+.story-image-badge i {
+    color: #ffd93d;
+}
+
+.story-content {
+    padding: 20px 0;
+}
+
+.story-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 5px 20px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.story-content h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    color: #2d3436;
+}
+
+.story-content h2 .highlight {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.story-intro {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #667eea;
+    margin-bottom: 15px;
+}
+
+.story-content p {
+    color: #636e72;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.story-milestones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.milestone {
+    text-align: center;
+}
+
+.milestone-number {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #667eea;
+    font-family: 'Playfair Display', serif;
+}
+
+.milestone-label {
+    font-size: 0.85rem;
+    color: #636e72;
+    margin-top: 4px;
+}
+
+/* ============================================
+   OUR VALUES SECTION
+   ============================================ */
+
+.our-values {
+    padding: 80px 0;
+    background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.value-card {
+    background: white;
+    padding: 35px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+    transition: all 0.4s ease;
+    border: 1px solid #f0f0f0;
+    position: relative;
+    overflow: hidden;
+}
+
+.value-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.value-card:hover::before {
+    transform: scaleX(1);
+}
+
+.value-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #667eea;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover .value-icon {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    transform: rotateY(360deg);
+}
+
+.value-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #2d3436;
+    font-family: 'Playfair Display', serif;
+}
+
+.value-card p {
+    color: #636e72;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.value-tag {
+    display: inline-block;
+    background: #f0f0f0;
+    padding: 4px 15px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    color: #636e72;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover .value-tag {
+    background: #667eea;
+    color: white;
+}
+
+/* ============================================
+   MEET THE TEAM SECTION
+   ============================================ */
+
+.meet-team {
+    padding: 80px 0;
+    background: white;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.team-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+    transition: all 0.4s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.team-image {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+    background: #f0f0f0;
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.team-card:hover .team-image img {
+    transform: scale(1.05);
+}
+
+.team-social {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.team-card:hover .team-social {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.team-social a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.team-social a:hover {
+    background: white;
+    color: #667eea;
+    transform: scale(1.1);
+}
+
+.team-info {
+    padding: 25px;
+}
+
+.team-info h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3436;
+    font-family: 'Playfair Display', serif;
+}
+
+.team-role {
+    display: block;
+    font-size: 0.9rem;
+    color: #667eea;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.team-bio {
+    font-size: 0.95rem;
+    color: #636e72;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.team-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.team-tags span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    color: #636e72;
+    background: #f8f9fa;
+    padding: 4px 12px;
+    border-radius: 50px;
+}
+
+.team-tags span i {
+    color: #667eea;
+    font-size: 0.75rem;
+}
+
+/* ============================================
+   KITCHEN PHILOSOPHY SECTION
+   ============================================ */
+
+.kitchen-philosophy {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #2d1b69 0%, #11998e 100%);
+    color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+.kitchen-philosophy::before {
+    content: '👨‍🍳';
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    font-size: 8rem;
+    opacity: 0.05;
+}
+
+.kitchen-philosophy::after {
+    content: '🍽️';
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 6rem;
+    opacity: 0.05;
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.philosophy-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 6px 20px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.philosophy-content h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+}
+
+.philosophy-content h2 .highlight {
+    background: linear-gradient(135deg, #ffd93d 0%, #ff6b6b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.philosophy-intro {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.philosophy-points {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.philosophy-point {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.philosophy-point i {
+    font-size: 1.5rem;
+    color: #ffd93d;
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+.philosophy-point h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.philosophy-point p {
+    opacity: 0.8;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.philosophy-image-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.philosophy-image-wrapper img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.philosophy-quote-overlay {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 20px 25px;
+    border-radius: 12px;
+    border-left: 4px solid #ffd93d;
+}
+
+.philosophy-quote-overlay i {
+    color: #ffd93d;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.philosophy-quote-overlay p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.philosophy-quote-overlay span {
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+/* ============================================
+   COMMUNITY IMPACT SECTION
+   ============================================ */
+
+.community-impact {
+    padding: 80px 0;
+    background: white;
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.impact-card {
+    background: #f8f9fa;
+    padding: 35px 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.4s ease;
+    border: 1px solid transparent;
+}
+
+.impact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+    border-color: #667eea;
+}
+
+.impact-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #667eea;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+.impact-card:hover .impact-icon {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.impact-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #2d3436;
+    font-family: 'Playfair Display', serif;
+}
+
+.impact-card p {
+    color: #636e72;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.impact-number {
+    display: inline-block;
+    background: white;
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #667eea;
+    border: 1px solid #e0e0e0;
+}
+
+.impact-card:hover .impact-number {
+    border-color: #667eea;
+}
+
+/* ============================================
+   AWARDS SECTION
+   ============================================ */
+
+.awards-section {
+    padding: 80px 0;
+    background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.award-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+    transition: all 0.4s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.award-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+    border-color: #ffd93d;
+}
+
+.award-card i {
+    font-size: 2.5rem;
+    color: #ffd93d;
+    margin-bottom: 15px;
+}
+
+.award-card h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2d3436;
+    margin-bottom: 5px;
+}
+
+.award-card p {
+    font-size: 0.85rem;
+    color: #636e72;
+}
+
+/* ============================================
+   TEAM TESTIMONIALS
+   ============================================ */
+
+.team-testimonials {
+    padding: 80px 0;
+    background: white;
+}
+
+.team-quotes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.team-quote {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    transition: all 0.4s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.team-quote:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+    border-color: #667eea;
+}
+
+.quote-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 15px;
+    border: 3px solid #667eea;
+}
+
+.quote-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-quote blockquote {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #2d3436;
+    font-style: italic;
+}
+
+.team-quote cite {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-style: normal;
+    color: #667eea;
+    font-weight: 500;
+}
+
+/* ============================================
+   ABOUT CTA
+   ============================================ */
+
+.about-cta {
+    padding: 80px 0;
+    background: white;
+}
+
+.about-cta .cta-box {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 60px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-cta .cta-box::before {
+    content: '❤️';
+    position: absolute;
+    bottom: -30px;
+    right: -20px;
+    font-size: 12rem;
+    opacity: 0.05;
+}
+
+.about-cta .cta-box::after {
+    content: '🍽️';
+    position: absolute;
+    top: -20px;
+    left: 30px;
+    font-size: 8rem;
+    opacity: 0.05;
+}
+
+.about-cta .cta-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.about-cta .cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+    color: white;
+}
+
+.about-cta .cta-content h2 i {
+    color: #ffd93d;
+    margin-right: 10px;
+}
+
+.about-cta .cta-content p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    max-width: 500px;
+}
+
+.about-cta .cta-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.about-cta .btn-primary {
+    background: white;
+    color: #667eea;
+}
+
+.about-cta .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.about-cta .btn-outline {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.about-cta .btn-outline:hover {
+    background: white;
+    color: #667eea;
+    transform: translateY(-3px);
+}
+
+.about-cta .cta-emoji {
+    display: flex;
+    gap: 15px;
+    font-size: 4rem;
+    position: relative;
+    z-index: 2;
+}
+
+.about-cta .cta-emoji span {
+    animation: float 3s ease-in-out infinite;
+}
+
+.about-cta .cta-emoji span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.about-cta .cta-emoji span:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+}
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .story-image-wrapper img {
+        height: 350px;
+    }
+
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .philosophy-image-wrapper img {
+        height: 350px;
+    }
+
+    .about-cta .cta-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 30px;
+    }
+
+    .about-cta .cta-content p {
+        max-width: 100%;
+    }
+
+    .about-cta .cta-buttons {
+        justify-content: center;
+    }
+
+    .about-cta .cta-emoji {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .about-hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .about-hero-quote {
+        padding: 20px;
+    }
+
+    .about-hero-quote em {
+        font-size: 1rem;
+    }
+
+    .story-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .story-milestones {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .philosophy-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .team-image {
+        height: 220px;
+    }
+
+    .awards-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .team-quotes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-cta .cta-content h2 {
+        font-size: 2rem;
+    }
+
+    .about-cta .cta-emoji {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hero-title {
+        font-size: 2rem;
+    }
+
+    .about-hero::before,
+    .about-hero::after {
+        display: none;
+    }
+
+    .story-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .story-milestones {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .milestone-number {
+        font-size: 1.2rem;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-image {
+        height: 250px;
+    }
+
+    .impact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .awards-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .award-card {
+        padding: 20px 15px;
+    }
+
+    .award-card i {
+        font-size: 2rem;
+    }
+
+    .about-cta .cta-box {
+        padding: 30px 20px;
+    }
+
+    .about-cta .cta-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .about-cta .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .about-cta .btn-primary,
+    .about-cta .btn-outline {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .about-cta .cta-emoji {
+        font-size: 2.5rem;
+    }
+
+    .philosophy-image-wrapper img {
+        height: 250px;
+    }
+
+    .philosophy-quote-overlay {
+        bottom: 15px;
+        left: 15px;
+        right: 15px;
+        padding: 15px 20px;
+    }
+
+    .philosophy-quote-overlay p {
+        font-size: 0.95rem;
+    }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+
+    .navbar,
+    .footer,
+    .about-hero,
+    .about-cta,
+    .meet-team,
+    .community-impact,
+    .awards-section,
+    .team-testimonials {
+        display: none !important;
+    }
+
+    .our-story {
+        padding: 40px 0;
+    }
+
+    .story-grid {
+        display: block;
+    }
+
+    .story-image-wrapper {
+        margin-bottom: 20px;
+    }
+
+    .our-values {
+        padding: 40px 0;
+        background: white;
+    }
+
+    .values-grid {
+        display: block;
+    }
+
+    .value-card {
+        margin-bottom: 20px;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+
+    .kitchen-philosophy {
+        background: white !important;
+        color: black !important;
+        padding: 40px 0;
+    }
+
+    .kitchen-philosophy .highlight {
+        -webkit-text-fill-color: #2d3436 !important;
+        background: none !important;
+    }
+
+    .philosophy-content {
+        color: black !important;
+    }
+
+    .philosophy-point p {
+        color: #636e72 !important;
+    }
+}

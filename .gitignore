@@ -1,0 +1,406 @@
+# ============================================
+# .gitignore - Restaurant Food Order Website
+# Excludes unnecessary files from version control
+# ============================================
+
+# ============================================
+# DEPENDENCIES & PACKAGES
+# ============================================
+
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Bower dependencies
+bower_components/
+
+# ============================================
+# ENVIRONMENT & CONFIGURATION
+# ============================================
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+
+# Configuration files (if you add any)
+*.config.js
+*.config.json
+!package.json
+
+# ============================================
+# IDE & EDITOR FILES
+# ============================================
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+.history/
+*.log
+
+# IntelliJ IDEA / WebStorm / PhpStorm
+.idea/
+*.iml
+*.ipr
+*.iws
+*.swp
+*.swo
+*~
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+.sublime/
+
+# Atom
+.atom/
+*.atom
+
+# Vim
+*.swp
+*.swo
+*~
+.vim/
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Brackets
+.brackets.json
+
+# ============================================
+# OPERATING SYSTEM FILES
+# ============================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Linux
+*~
+.directory
+*.swp
+*.swo
+
+# ============================================
+# BUILD & DISTRIBUTION
+# ============================================
+
+# Build outputs
+dist/
+build/
+out/
+*.min.js
+*.min.css
+
+# Compiled files
+*.log
+*.tmp
+*.temp
+*.cache
+
+# ============================================
+# TESTING & COVERAGE
+# ============================================
+
+# Test coverage
+coverage/
+.nyc_output/
+*.lcov
+*.cov
+
+# Test files (if using testing frameworks)
+*.test.js
+*.spec.js
+__tests__/
+__mocks__/
+
+# ============================================
+# PROJECT-SPECIFIC FILES
+# ============================================
+
+# Local development assets (if any)
+assets/images/temp/
+assets/images/optimized/
+temp/
+tmp/
+*.tmp
+
+# User-generated content (if applicable)
+uploads/
+user-uploads/
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# ============================================
+# DATABASE & DATA FILES
+# ============================================
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+*.mdb
+*.accdb
+
+# Data files (if you have JSON data that gets modified)
+data/*.json
+!data/menu-items.json  # Keep this if it's your source data
+
+# ============================================
+# SECURITY & SENSITIVE FILES
+# ============================================
+
+# Security files
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.env
+
+# API keys (if added to any files)
+.env.local
+.env.*.local
+
+# SSL certificates
+certs/
+ssl/
+
+# ============================================
+# DEPLOYMENT & SERVER FILES
+# ============================================
+
+# Server files
+.htaccess
+.htpasswd
+web.config
+*.conf
+
+# Deployment files
+deploy/
+deployments/
+.cpanel.yml
+.elasticbeanstalk/
+
+# ============================================
+# MISCELLANEOUS
+# ============================================
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Cache
+.cache/
+*.cache
+.eslintcache
+.stylelintcache
+*.tsbuildinfo
+
+# Dotfiles
+*.local
+.vercel
+.netlify
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*~
+
+# ============================================
+# GIT SPECIFIC
+# ============================================
+
+# Git hooks (if using)
+.git/hooks/
+
+# Git configuration (if tracking personal config)
+.git/config
+!.gitignore
+!.gitattributes
+
+# ============================================
+# DOCUMENTATION & HELP FILES
+# ============================================
+
+# Documentation build output
+docs/_build/
+docs/api/
+
+# Help files (if generated)
+*.help
+*.chm
+
+# ============================================
+# EXTERNAL SERVICES & INTEGRATIONS
+# ============================================
+
+# Payment gateway test files
+.paypal/
+stripe/
+*.stripe
+
+# Analytics files (if tracking)
+.analytics/
+*.ga
+
+# CDN cache
+.cdn-cache/
+
+# ============================================
+# SPECIAL CASES - Keep these files
+# ============================================
+
+# !.gitkeep - Ensures empty directories remain in repo
+!.gitkeep
+!.gitattributes
+!.gitignore
+
+# Keep essential config files
+!package.json
+!composer.json
+!.eslintrc.js
+!.prettierrc
+
+# Keep README and documentation
+!README.md
+!LICENSE
+!CONTRIBUTING.md
+!CHANGELOG.md
+
+# ============================================
+# OPTIONAL: LINTER & CODE QUALITY
+# ============================================
+
+# ESLint
+.eslintcache
+.eslintrc.js
+.eslintrc.json
+.eslintignore
+
+# Prettier
+.prettierrc
+.prettierignore
+
+# Stylelint
+.stylelintcache
+.stylelintrc
+
+# ============================================
+# OPTIONAL: TASK RUNNERS
+# ============================================
+
+# Gulp
+gulpfile.js
+gulpfile.babel.js
+.gulp/
+
+# Grunt
+Gruntfile.js
+.grunt/
+
+# Webpack
+webpack.config.js
+webpack.config.*.js
+dist/
+build/
+
+# ============================================
+# OPTIONAL: DOCKER
+# ============================================
+
+# Docker
+docker-compose.override.yml
+.docker/
+Dockerfile
+*.dockerfile
+docker-compose.*.yml
+!docker-compose.yml
+
+# ============================================
+# OPTIONAL: CI/CD
+# ============================================
+
+# CI/CD configurations
+.github/
+.gitlab/
+.azure-pipelines/
+.travis.yml
+.jenkins/
+.circleci/
+.gitlab-ci.yml
+
+# ============================================
+# ADDITIONAL PROJECT-SPECIFIC IGNORES
+# ============================================
+
+# Fonts (if you download custom fonts)
+assets/fonts/*.woff
+assets/fonts/*.woff2
+assets/fonts/*.ttf
+!assets/fonts/README.md
+
+# Image optimization temp files
+assets/images/.optimized/
+assets/images/*-optimized.*
+
+# Service worker files (if using)
+service-worker.js
+sw.js
+*.sw.js
+
+# Manifest files (if using)
+manifest.json
+*.webmanifest
+
+# RSS feeds (if generating)
+feed.xml
+rss.xml
+*.rss
+
+# Sitemap (if generating)
+sitemap.xml
+sitemap.xml.gz
+sitemap_index.xml
+*.sitemap.xml
+
+# ============================================
+# END OF .gitignore
+# ============================================

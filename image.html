@@ -1,0 +1,566 @@
+## 🖼️ Image Placeholder HTML (for development)
+
+Here's a quick HTML file you can use to generate placeholder images:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Placeholders - Foodie's Delight</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f8f9fa;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #2d3436;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .placeholder-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+            border: 1px solid #f0f0f0;
+        }
+
+        .placeholder-card .image {
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .placeholder-card .image .size {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+        }
+
+        .placeholder-card .info {
+            padding: 15px;
+        }
+
+        .placeholder-card .info h3 {
+            font-size: 1rem;
+            margin: 0 0 5px 0;
+            color: #2d3436;
+        }
+
+        .placeholder-card .info p {
+            margin: 0;
+            color: #636e72;
+            font-size: 0.85rem;
+        }
+
+        .placeholder-card .info .filename {
+            font-family: monospace;
+            background: #f0f0f0;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        .section {
+            margin-top: 40px;
+        }
+
+        .section h2 {
+            color: #2d3436;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 2px 10px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            margin-top: 5px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .note {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+
+        .note strong {
+            color: #856404;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🍽️ Foodie's Delight - Image Placeholders</h1>
+
+    <div class="note">
+        <strong>📸 Need Real Images?</strong>
+        <p>Replace these placeholders with actual images. Visit <a href="https://unsplash.com"
+                target="_blank">Unsplash</a>,
+            <a href="https://pexels.com" target="_blank">Pexels</a>, or <a href="https://foodiesfeed.com"
+                target="_blank">FoodiesFeed</a>
+            for free food images.
+        </p>
+    </div>
+
+    <!-- Hero Images -->
+    <div class="section">
+        <h2>🏠 Hero Images (1920x1080)</h2>
+        <div class="grid">
+            <div class="placeholder-card">
+                <div class="image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    🍽️ Hero Background Image
+                    <span class="size">1920x1080</span>
+                </div>
+                <div class="info">
+                    <h3>Hero Background</h3>
+                    <p>Main hero section background</p>
+                    <span class="filename">hero-bg.jpg</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Images -->
+    <div class="section">
+        <h2>📖 About Page Images (800x600)</h2>
+        <div class="grid">
+            <div class="placeholder-card">
+                <div class="image" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                    📖 Our Story
+                    <span class="size">800x600</span>
+                </div>
+                <div class="info">
+                    <h3>About Story</h3>
+                    <p>Restaurant story image</p>
+                    <span class="filename">about-story.jpg</span>
+                </div>
+            </div>
+            <div class="placeholder-card">
+                <div class="image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    🍳 Kitchen Philosophy
+                    <span class="size">800x600</span>
+                </div>
+                <div class="info">
+                    <h3>Kitchen Philosophy</h3>
+                    <p>Kitchen philosophy image</p>
+                    <span class="filename">kitchen-philosophy.jpg</span>
+                </div>
+            </div>
+            <div class="placeholder-card">
+                <div class="image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    📍 Map Location
+                    <span class="size">800x400</span>
+                </div>
+                <div class="info">
+                    <h3>Map Placeholder</h3>
+                    <p>Location map image</p>
+                    <span class="filename">map-placeholder.jpg</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Team Images -->
+    <div class="section">
+        <h2>👨‍🍳 Team Photos (400x500)</h2>
+        <div class="grid">
+            <div class="placeholder-card">
+                <div class="image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    👩‍🍳 Chef Maria
+                    <span class="size">400x500</span>
+                </div>
+                <div class="info">
+                    <h3>Maria Santos</h3>
+                    <p>Founder & Head Chef</p>
+                    <span class="filename">chef-maria.jpg</span>
+                </div>
+            </div>
+            <div class="placeholder-card">
+                <div class="image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    👨‍🍳 Chef David
+                    <span class="size">400x500</span>
+                </div>
+                <div class="info">
+                    <h3>David Chen</h3>
+                    <p>Executive Chef</p>
+                    <span class="filename">chef-david.jpg</span>
+                </div>
+            </div>
+            <div class="placeholder-card">
+                <div class="image" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                    👩‍🍳 Sarah Johnson
+                    <span class="size">400x500</span>
+                </div>
+                <div class="info">
+                    <h3>Sarah Johnson</h3>
+                    <p>Pastry Chef</p>
+                    <span class="filename">sarah.jpg</span>
+                </div>
+            </div>
+            <div class="placeholder-card">
+                <div class="image" style="background: linear-gradient(135deg, #2d1b69 0%, #11998e 100%);">
+                    👨‍💼 Mike Rodriguez
+                    <span class="size">400x500</span>
+                </div>
+                <div class="info">
+                    <h3>Mike Rodriguez</h3>
+                    <p>Operations Manager</p>
+                    <span class="filename">mike.jpg</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Images - Appetizers -->
+    <div class="section">
+        <h2>🍤 Appetizers (400x300)</h2>
+        <div class="grid">
+            <div class="placeholder-card">
+                <div class="image" style="background: linear-gradient(135deg, #ffd93d 0%, #ff6b6b 100%);">
+                    🍞 Bruschetta
+                    <span class="size">400x300</span>
+                </div>
+                <div class="info">
+                    <h3>Truffle Mushroom Bruschetta</h3>
+                    <p>$12.99</p>
+                    <span class="filename">bruschetta.jpg</span>
+                </div>
+            </div>
+            <div class="placeholder-card">
+                <div class="image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    🦑 Calamari
+                    <span class="size">400x300</span>
+                </div>
+                <div class="info">
+                    <h3>Crispy Calamari</h3>
+                    <p>$14.99</p>
+                    <span class="filename">calamari.jpg</span>
+                </div>
+            </div>
+            <div class="placeholder-card">
+                <div class="image" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                    🥬 Spinach Dip
+                    <span class="size">400x300</span>
+                </div>
+                <div class="info">
+                    <h3>Spinach & Artichoke Dip</h3>
+                    <p>$11.99</p>
+                    <span class="filename">spinach-dip.jpg</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Images - Main Course -->
+    <div class="section">
+        <h2>🥩 Main Course (400x300)</h2>
+        <div class="grid">
+            <div class="placeholder-card">
+                <div class="image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    🐟 Salmon
+                    <span class="size">400x300</span>
+                </div>
+                <div class="info">
+                    <h3>Grilled Salmon Fillet</h3>
+                    <p>$28.99</p>
+                    <span class="filename">salmon.jpg</span>
+                </div>
+            </div>
+            <div class="placeholder-card">
+                <div class="image" style="background: linear-gradient(135deg, #ffd93d 0%, #ff6b6b 100%);">
+                    🥩 Lamb
+                    <span class="size">400x300</span>
+                </div>
+                <div class="info">
+                    <h3>Herb-Crusted Rack of Lamb</h3>
+                    <p>$34.99</p>
+                    <span class="filename">lamb.jpg</span>
+                </div>
+            </div>
+            <div class="placeholder-card">
+                <div class="image" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                    🍚 Risotto
+                    <span class="size">400x300</span>
+                </div>
+                <div class="info">
+                    <h3>Wild Mushroom Risotto</h3>
+                    <p>$24.99</p>
+                    <span class="filename">risotto.jpg</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Images - Pasta -->
+    <div class="section">
+        <h2>🍝 Pasta (400x300)</h2>
+        <div class="grid">
+            <div class="placeholder-card">
+                <div class="image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    🍝 Carbonara
+                    <span class="size">400x300</span>
+                </div>
+                <div class="info">
+                    <h3>Homemade Linguine Carbonara</h3>
+                    <p>$22.99</p>
+                    <span class="filename">carbonara.jpg</span>
+                </div>
+            </div>
+            <div class="placeholder-card">
+                <div class="image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    🍝 Puttanesca
+                    <span class="size">400x300</span>
+                </div>
+                <div class="info">
+                    <h3>Spaghetti alla Puttanesca</h3>
+                    <p>$20.99</p>
+                    <span class="filename">puttanesca.jpg</span>
+                </div>
+            </div>
+            <div class="placeholder-card">
+                <div class="image" style="background: linear-gradient(135deg, #ffd93d 0%, #ff6b6b 100%);">
+                    🍝 Alfredo
+                    <span class="size">400x300</span>
+                </div>
+                <div class="info">
+                    <h3>Fettuccine Alfredo</h3>
+                    <p>$21.99</p>
+                    <span class="filename">alfredo.jpg</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Images - Seafood -->
+    <div class="section">
+        <h2>🦞 Seafood (400x300)</h2>
+        <div class="grid">
+            <div class="placeholder-card">
+                <div class="image" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                    🥘 Paella
+                    <span class="size">400x300</span>
+                </div>
+                <div class="info">
+                    <h3>Seafood Paella</h3>
+                    <p>$32.99</p>
+                    <span class="filename">paella.jpg</span>
+                </div>
+            </div>
+            <div class="placeholder-card">
+                <div class="image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    🦞 Lobster
+                    <span class="size">400x300</span>
+                </div>
+                <div class="info">
+                    <h3>Lobster Thermidor</h3>
+                    <p>$39.99</p>
+                    <span class="filename">lobster.jpg</span>
+                </div>
+            </div>
+            <div class="placeholder-card">
+                <div class="image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    🐟 Swordfish
+                    <span class="size">400x300</span>
+                </div>
+                <div class="info">
+                    <h3>Grilled Swordfish</h3>
+                    <p>$29.99</p>
+                    <span class="filename">swordfish.jpg</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Images - Desserts -->
+    <div class="section">
+        <h2>🍰 Desserts (400x300)</h2>
+        <div class="grid">
+            <div class="placeholder-card">
+                <div class="image" style="background: linear-gradient(135deg, #ffd93d 0%, #ff6b6b 100%);">
+                    🍰 Tiramisu
+                    <span class="size">400x300</span>
+                </div>
+                <div class="info">
+                    <h3>Tiramisu</h3>
+                    <p>$9.99</p>
+                    <span class="filename">tiramisu.jpg</span>
+                </div>
+            </div>
+            <div class="placeholder-card">
+                <div class="image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    🍫 Lava Cake
+                    <span class="size">400x300</span>
+                </div>
+                <div class="info">
+                    <h3>Chocolate Lava Cake</h3>
+                    <p>$10.99</p>
+                    <span class="filename">lava-cake.jpg</span>
+                </div>
+            </div>
+            <div class="placeholder-card">
+                <div class="image" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                    🍮 Crème Brûlée
+                    <span class="size">400x300</span>
+                </div>
+                <div class="info">
+                    <h3>Crème Brûlée</h3>
+                    <p>$9.99</p>
+                    <span class="filename">creme-brulee.jpg</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Images - Beverages -->
+    <div class="section">
+        <h2>🍷 Beverages (400x300)</h2>
+        <div class="grid">
+            <div class="placeholder-card">
+                <div class="image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    ☕ Espresso Martini
+                    <span class="size">400x300</span>
+                </div>
+                <div class="info">
+                    <h3>Espresso Martini</h3>
+                    <p>$12.99</p>
+                    <span class="filename">espresso-martini.jpg</span>
+                </div>
+            </div>
+            <div class="placeholder-card">
+                <div class="image" style="background: linear-gradient(135deg, #ffd93d 0%, #ff6b6b 100%);">
+                    🍋 Lemonade
+                    <span class="size">400x300</span>
+                </div>
+                <div class="info">
+                    <h3>Fresh Lemonade</h3>
+                    <p>$5.99</p>
+                    <span class="filename">lemonade.jpg</span>
+                </div>
+            </div>
+            <div class="placeholder-card">
+                <div class="image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    🍷 Sangria
+                    <span class="size">400x300</span>
+                </div>
+                <div class="info">
+                    <h3>Signature Sangria</h3>
+                    <p>$10.99</p>
+                    <span class="filename">sangria.jpg</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Frequently Bought Together -->
+    <div class="section">
+        <h2>🛒 Frequently Bought Together (300x200)</h2>
+        <div class="grid">
+            <div class="placeholder-card">
+                <div class="image" style="background: linear-gradient(135deg, #ffd93d 0%, #ff6b6b 100%);">
+                    🥖 Garlic Bread
+                    <span class="size">300x200</span>
+                </div>
+                <div class="info">
+                    <h3>Garlic Bread</h3>
+                    <p>$6.99</p>
+                    <span class="filename">garlic-bread.jpg</span>
+                </div>
+            </div>
+            <div class="placeholder-card">
+                <div class="image" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                    🥗 Side Salad
+                    <span class="size">300x200</span>
+                </div>
+                <div class="info">
+                    <h3>Side Salad</h3>
+                    <p>$5.99</p>
+                    <span class="filename">side-salad.jpg</span>
+                </div>
+            </div>
+            <div class="placeholder-card">
+                <div class="image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    💧 Mineral Water
+                    <span class="size">300x200</span>
+                </div>
+                <div class="info">
+                    <h3>Mineral Water</h3>
+                    <p>$2.99</p>
+                    <span class="filename">water.jpg</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Customer Testimonials -->
+    <div class="section">
+        <h2>💬 Customer Testimonials (200x200)</h2>
+        <div class="grid">
+            <div class="placeholder-card">
+                <div class="image"
+                    style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 50%; width: 150px; height: 150px; margin: 25px auto;">
+                    👩
+                </div>
+                <div class="info">
+                    <h3>Sarah & Family</h3>
+                    <p>"The pasta reminded me of Italy!"</p>
+                    <span class="filename">customer1.jpg</span>
+                </div>
+            </div>
+            <div class="placeholder-card">
+                <div class="image"
+                    style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; width: 150px; height: 150px; margin: 25px auto;">
+                    👨
+                </div>
+                <div class="info

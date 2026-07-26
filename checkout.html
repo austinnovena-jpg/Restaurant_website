@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete your order - We're almost there!">
+    <title>Checkout - Foodie's Delight</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <i class="fas fa-utensils"></i>
+                        <span>Foodie's Delight</span>
+                    </a>
+                </div>
+
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="menu.html" class="nav-link">
+                            <i class="fas fa-book-open"></i> Menu
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-link">
+                            <i class="fas fa-shopping-cart"></i> Cart
+                            <span class="cart-badge" id="cartCount">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">
+                            <i class="fas fa-info-circle"></i> About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">
+                            <i class="fas fa-envelope"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Checkout Hero Section -->
+    <section class="checkout-hero">
+        <div class="checkout-hero-overlay">
+            <div class="container">
+                <div class="checkout-hero-content">
+                    <span class="checkout-hero-badge">
+                        <i class="fas fa-heart"></i> Almost There!
+                    </span>
+                    <h1 class="checkout-hero-title">
+                        Let's Get Your <span class="highlight">Food Ready</span>
+                    </h1>
+                    <p class="checkout-hero-subtitle">
+                        You're just a few steps away from deliciousness! We'll take it from here
+                        and make sure your meal is prepared with love and delivered with care.
+                    </p>
+                    <div class="checkout-steps">
+                        <div class="step active">
+                            <span class="step-number">1</span>
+                            <span class="step-label">Review Order</span>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step">
+                            <span class="step-number">2</span>
+                            <span class="step-label">Your Details</span>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step">
+                            <span class="step-number">3</span>
+                            <span class="step-label">Payment</span>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step">
+                            <span class="step-number">4</span>
+                            <span class="step-label">Confirmation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Checkout Section -->
+    <section class="checkout-main">
+        <div class="container">
+            <div class="checkout-wrapper">
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <div class="summary-header">
+                        <h3>
+                            <i class="fas fa-shopping-bag"></i>
+                            Your Order
+                        </h3>
+                        <span class="order-count" id="orderCount">3 items</span>
+                    </div>
+
+                    <div class="order-items" id="orderItems">
+                        <!-- Items will be dynamically loaded -->
+                        <div class="order-item">
+                            <div class="item-image">
+                                <img src="assets/images/food-item-1.jpg" alt="Grilled Salmon">
+                            </div>
+                            <div class="item-details">
+                                <h4>Grilled Salmon</h4>
+                                <p class="item-variant">With lemon butter sauce</p>
+                                <div class="item-meta">
+                                    <span class="item-quantity">×2</span>
+                                    <span class="item-price">$28.00</span>
+                                </div>
+                            </div>
+                            <button class="remove-item" aria-label="Remove item">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <!-- More items... -->
+                    </div>
+
+                    <div class="order-notes">
+                        <div class="notes-header">
+                            <i class="fas fa-pencil-alt"></i>
+                            <h4>Special Instructions</h4>
+                        </div>
+                        <p class="notes-hint">
+                            <i class="fas fa-info-circle"></i>
+                            Any allergies, preferences, or special requests? Let us know!
+                        </p>
+                        <textarea id="orderNotes" rows="3"
+                            placeholder="E.g., No onions, extra sauce, gluten-free options..."></textarea>
+                    </div>
+
+                    <div class="order-totals">
+                        <div class="total-row">
+                            <span>Subtotal</span>
+                            <span>$56.00</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Delivery Fee</span>
+                            <span>$5.00</span>
+                        </div>
+                        <div class="total-row discount-row" style="display: none;">
+                            <span>Discount</span>
+                            <span class="discount-amount">-$10.00</span>
+                        </div>
+                        <div class="total-row promo-row">
+                            <span>Promo Code</span>
+                            <div class="promo-input">
+                                <input type="text" id="promoCode" placeholder="Enter promo code">
+                                <button id="applyPromo" class="btn-promo">Apply</button>
+                            </div>
+                        </div>
+                        <div class="total-row total-final">
+                            <span>Total</span>
+                            <span class="final-price">$61.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Checkout Form -->
+                <div class="checkout-form-container">
+                    <div class="form-header">
+                        <h3>
+                            <i class="fas fa-user-check"></i>
+                            Where Should We Deliver?
+                        </h3>
+                        <p>We'll make sure your food gets to you hot and fresh!</p>
+                    </div>
+
+                    <form id="checkoutForm" class="checkout-form">
+                        <!-- Delivery Type -->
+                        <div class="form-section">
+                            <h4 class="section-title">
+                                <i class="fas fa-truck"></i>
+                                Delivery Options
+                            </h4>
+                            <div class="delivery-options">
+                                <label class="delivery-option active">
+                                    <input type="radio" name="deliveryType" value="delivery" checked>
+                                    <div class="option-content">
+                                        <i class="fas fa-truck"></i>
+                                        <div>
+                                            <strong>Delivery</strong>
+                                            <span>Get it delivered to your door</span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="delivery-option">
+                                    <input type="radio" name="deliveryType" value="pickup">
+                                    <div class="option-content">
+                                        <i class="fas fa-store"></i>
+                                        <div>
+                                            <strong>Pickup</strong>
+                                            <span>Come grab your order</span>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Personal Information -->
+                        <div class="form-section">
+                            <h4 class="section-title">
+                                <i class="fas fa-user"></i>
+                                Your Information
+                            </h4>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="fullName">
+                                        <i class="fas fa-user"></i> Full Name
+                                        <span class="required">*</span>
+                                    </label>
+                                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name"
+                                        required>
+                                    <div class="form-hint">
+                                        <i class="fas fa-info-circle"></i>
+                                        So we know who to thank!
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">
+                                        <i class="fas fa-phone"></i> Phone Number
+                                        <span class="required">*</span>
+                                    </label>
+                                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number"
+                                        required>
+                                    <div class="form-hint">
+                                        <i class="fas fa-info-circle"></i>
+                                        In case we need to reach you
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">
+                                    <i class="fas fa-envelope"></i> Email Address
+                                    <span class="required">*</span>
+                                </label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email address"
+                                    required>
+                                <div class="form-hint">
+                                    <i class="fas fa-info-circle"></i>
+                                    We'll send your order confirmation here
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Delivery Address -->
+                        <div class="form-section" id="addressSection">
+                            <h4 class="section-title">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Delivery Address
+                            </h4>
+                            <div class="form-group">
+                                <label for="address">
+                                    <i class="fas fa-home"></i> Street Address
+                                    <span class="required">*</span>
+                                </label>
+                                <input type="text" id="address" name="address" placeholder="Enter your street address"
+                                    required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">City <span class="required">*</span></label>
+                                    <input type="text" id="city" name="city" placeholder="Enter your city" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="zipCode">ZIP Code <span class="required">*</span></label>
+                                    <input type="text" id="zipCode" name="zipCode" placeholder="Enter ZIP code"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="deliveryInstructions">Delivery Instructions</label>
+                                <input type="text" id="deliveryInstructions"
+                                    placeholder="E.g., Gate code, apartment number, landmark...">
+                                <div class="form-hint">
+                                    <i class="fas fa-info-circle"></i>
+                                    Help us find you faster!
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Payment Method -->
+                        <div class="form-section">
+                            <h4 class="section-title">
+                                <i class="fas fa-credit-card"></i>
+                                Payment Method
+                            </h4>
+                            <div class="payment-options">
+                                <label class="payment-option active">
+                                    <input type="radio" name="paymentMethod" value="card" checked>
+                                    <div class="option-content">
+                                        <i class="fas fa-credit-card"></i>
+                                        <div>
+                                            <strong>Credit/Debit Card</strong>
+                                            <span>Pay with card</span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="paymentMethod" value="paypal">
+                                    <div class="option-content">
+                                        <i class="fab fa-paypal"></i>
+                                        <div>
+                                            <strong>PayPal</strong>
+                                            <span>Pay with PayPal</span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="paymentMethod" value="cash">
+                                    <div class="option-content">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                        <div>
+                                            <strong>Cash on Delivery</strong>
+                                            <span>Pay when you receive</span>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <!-- Card Details (shown for card payment) -->
+                            <div id="cardDetails" class="card-details">
+                                <div class="form-group">
+                                    <label for="cardNumber">
+                                        <i class="fas fa-credit-card"></i> Card Number
+                                        <span class="required">*</span>
+                                    </label>
+                                    <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                                    <div class="card-icons">
+                                        <i class="fab fa-cc-visa"></i>
+                                        <i class="fab fa-cc-mastercard"></i>
+                                        <i class="fab fa-cc-amex"></i>
+                                        <i class="fab fa-cc-discover"></i>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="expiryDate">
+                                            <i class="fas fa-calendar"></i> Expiry Date
+                                            <span class="required">*</span>
+                                        </label>
+                                        <input type="text" id="expiryDate" placeholder="MM/YY" maxlength="5">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvv">
+                                            <i class="fas fa-lock"></i> CVV
+                                            <span class="required">*</span>
+                                        </label>
+                                        <input type="text" id="cvv" placeholder="123" maxlength="4">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review & Submit -->
+                        <div class="form-section">
+                            <h4 class="section-title">
+                                <i class="fas fa-check-circle"></i>
+                                Review & Confirm
+                            </h4>
+
+                            <div class="review-box">
+                                <div class="review-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Estimated delivery: <strong>30-45 minutes</strong></span>
+                                </div>
+                                <div class="review-item">
+                                    <i class="fas fa-utensils"></i>
+                                    <span>Prepared with <span class="heart">❤️</span> by our chefs</span>
+                                </div>
+                                <div class="review-item">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Secure payment guaranteed</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="terms" name="terms" required>
+                                    <span class="checkmark"></span>
+                                    <span class="checkbox-text">
+                                        I agree to the <a href="#" target="_blank">terms and conditions</a>
+                                        and confirm that my order details are correct
+                                        <span class="required">*</span>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-place-order">
+                                <i class="fas fa-check-circle"></i>
+                                Place Order
+                                <span class="btn-loader" style="display: none;">
+                                    <i class="fas fa-spinner fa-spin"></i> Processing...
+                                </span>
+                            </button>
+
+                            <div class="form-success" style="display: none;">
+                                <i class="fas fa-check-circle"></i>
+                                <h3>Order Placed Successfully! 🎉</h3>
+                                <p>Thank you for choosing us! Your order has been received and is being prepared with
+                                    love.</p>
+                                <div class="order-number">
+                                    <span>Order #</span>
+                                    <strong id="orderNumber">FOOD-2024-0001</strong>
+                                </div>
+                                <div class="success-actions">
+                                    <a href="index.html" class="btn btn-primary">
+                                        <i class="fas fa-home"></i> Back to Home
+                                    </a>
+                                    <a href="menu.html" class="btn btn-secondary">
+                                        <i class="fas fa-utensils"></i> Order More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Signals -->
+    <section class="trust-signals">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>
+                        <h4>Secure Checkout</h4>
+                        <p>Your payment is encrypted and secure</p>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-undo-alt"></i>
+                    <div>
+                        <h4>Easy Returns</h4>
+                        <p>Not satisfied? We'll make it right</p>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-headset"></i>
+                    <div>
+                        <h4>24/7 Support</h4>
+                        <p>We're here whenever you need us</p>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-leaf"></i>
+                    <div>
+                        <h4>Fresh Guarantee</h4>
+                        <p>Always fresh, always delicious</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-logo">
+                        <i class="fas fa-utensils"></i>
+                        Foodie's Delight
+                    </h3>
+                    <p>Delivering happiness through delicious food since 2020.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="menu.html"><i class="fas fa-chevron-right"></i> Menu</a></li>
+                        <li><a href="cart.html"><i class="fas fa-chevron-right"></i> Cart</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            123 Food Street, New York, NY 10001
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            +1 (555) 123-4567
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            info@foodiesdelight.com
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Opening Hours</h4>
+                    <ul class="hours">
+                        <li><span>Mon - Fri:</span> 11:00 AM - 10:00 PM</li>
+                        <li><span>Saturday:</span> 12:00 PM - 11:00 PM</li>
+                        <li><span>Sunday:</span> 12:00 PM - 9:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Foodie's Delight. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/utils.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your cart - Let's get your delicious meal ready!">
+    <title>Your Cart - Foodie's Delight</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <i class="fas fa-utensils"></i>
+                        <span>Foodie's Delight</span>
+                    </a>
+                </div>
+
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="menu.html" class="nav-link">
+                            <i class="fas fa-book-open"></i> Menu
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-link active">
+                            <i class="fas fa-shopping-cart"></i> Cart
+                            <span class="cart-badge" id="cartCount">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">
+                            <i class="fas fa-info-circle"></i> About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">
+                            <i class="fas fa-envelope"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Cart Hero Section -->
+    <section class="cart-hero">
+        <div class="cart-hero-overlay">
+            <div class="container">
+                <div class="cart-hero-content">
+                    <span class="cart-hero-badge">
+                        <i class="fas fa-shopping-bag"></i> Your Cart
+                    </span>
+                    <h1 class="cart-hero-title">
+                        <span class="highlight">Delicious</span> Choices Await
+                    </h1>
+                    <p class="cart-hero-subtitle">
+                        Take a moment to review your selections. Each dish is crafted with love
+                        and will be prepared fresh just for you!
+                    </p>
+                    <div class="cart-hero-emoji">
+                        <span>🍽️</span>
+                        <span>❤️</span>
+                        <span>👨‍🍳</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Cart Section -->
+    <section class="cart-main">
+        <div class="container">
+            <div class="cart-wrapper">
+                <!-- Cart Items -->
+                <div class="cart-items-section">
+                    <div class="cart-header">
+                        <div class="cart-header-left">
+                            <h3>
+                                <i class="fas fa-shopping-cart"></i>
+                                Your Order (<span id="cartItemCount">0</span> items)
+                            </h3>
+                            <p class="cart-subtitle">Each item is prepared fresh with premium ingredients</p>
+                        </div>
+                        <button id="clearCart" class="btn-clear">
+                            <i class="fas fa-trash-alt"></i>
+                            Clear Cart
+                        </button>
+                    </div>
+
+                    <!-- Cart Items List -->
+                    <div class="cart-items" id="cartItems">
+                        <!-- Items will be dynamically loaded -->
+                        <div class="empty-cart" id="emptyCart">
+                            <div class="empty-cart-content">
+                                <i class="fas fa-shopping-bag"></i>
+                                <h3>Your cart is empty</h3>
+                                <p>Looks like you haven't added any delicious items yet.
+                                    Time to explore our menu and find something tasty!</p>
+                                <a href="menu.html" class="btn btn-primary">
+                                    <i class="fas fa-utensils"></i> Browse Menu
+                                </a>
+                                <div class="empty-cart-suggestions">
+                                    <span>Popular choices:</span>
+                                    <div class="suggestion-tags">
+                                        <a href="menu.html#pasta">🍝 Pasta</a>
+                                        <a href="menu.html#seafood">🦞 Seafood</a>
+                                        <a href="menu.html#desserts">🍰 Desserts</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Continue Shopping -->
+                    <div class="continue-shopping">
+                        <a href="menu.html" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i>
+                            Continue Shopping
+                        </a>
+                        <div class="cart-savings">
+                            <i class="fas fa-gift"></i>
+                            <span>You're <strong>$25</strong> away from free delivery!</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary" id="cartSummary">
+                    <div class="summary-card">
+                        <h4 class="summary-title">
+                            <i class="fas fa-receipt"></i>
+                            Order Summary
+                        </h4>
+
+                        <div class="summary-items-count">
+                            <span>Items:</span>
+                            <span id="summaryItemCount">0</span>
+                        </div>
+
+                        <div class="summary-items-list" id="summaryItemsList">
+                            <!-- Mini items list -->
+                        </div>
+
+                        <div class="summary-divider"></div>
+
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="subtotal">$0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Delivery Fee</span>
+                            <span id="deliveryFee">$5.00</span>
+                        </div>
+                        <div class="summary-row discount-row" id="discountRow" style="display: none;">
+                            <span>Discount</span>
+                            <span class="discount-amount" id="discountAmount">-$0.00</span>
+                        </div>
+                        <div class="summary-row promo-row">
+                            <div class="promo-input-wrapper">
+                                <input type="text" id="summaryPromoCode" placeholder="Promo code">
+                                <button id="summaryApplyPromo" class="btn-promo-small">
+                                    Apply
+                                </button>
+                            </div>
+                            <div id="promoMessage" class="promo-message"></div>
+                        </div>
+
+                        <div class="summary-divider"></div>
+
+                        <div class="summary-row total-row">
+                            <span class="total-label">Total</span>
+                            <span class="total-amount" id="totalAmount">$0.00</span>
+                        </div>
+
+                        <div class="summary-tip">
+                            <i class="fas fa-clock"></i>
+                            <span>Estimated delivery: <strong>30-45 min</strong></span>
+                        </div>
+
+                        <button id="checkoutBtn" class="btn btn-primary btn-checkout" disabled>
+                            <i class="fas fa-lock"></i>
+                            Proceed to Checkout
+                            <span class="btn-arrow"><i class="fas fa-arrow-right"></i></span>
+                        </button>
+
+                        <div class="secure-checkout">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secure checkout. Your payment is protected.</span>
+                        </div>
+
+                        <div class="trust-badges">
+                            <span><i class="fas fa-check-circle"></i> Fresh ingredients</span>
+                            <span><i class="fas fa-check-circle"></i> Free returns</span>
+                            <span><i class="fas fa-check-circle"></i> 24/7 support</span>
+                        </div>
+                    </div>
+
+                    <!-- Personalized Message -->
+                    <div class="personal-message">
+                        <div class="message-bubble">
+                            <i class="fas fa-smile-wink"></i>
+                            <p>
+                                <span class="chef-name">👨‍🍳 Chef's Note:</span>
+                                "Every dish tells a story. What's yours going to be today?"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Frequently Bought Together -->
+    <section class="frequently-bought" id="frequentlyBought">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">You Might Also Like</span>
+                <h2>Frequently Bought <span class="highlight">Together</span></h2>
+                <p>Customers who ordered these also enjoyed these delicious items</p>
+            </div>
+            <div class="frequently-grid" id="frequentlyGrid">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Satisfaction Guarantee -->
+    <section class="satisfaction-guarantee">
+        <div class="container">
+            <div class="guarantee-box">
+                <div class="guarantee-content">
+                    <i class="fas fa-medal"></i>
+                    <h3>100% Satisfaction Guaranteed</h3>
+                    <p>
+                        We take pride in our food and service. If you're not completely happy
+                        with your order, we'll make it right. No questions asked.
+                    </p>
+                    <div class="guarantee-features">
+                        <span><i class="fas fa-utensils"></i> Fresh ingredients</span>
+                        <span><i class="fas fa-truck"></i> Fast delivery</span>
+                        <span><i class="fas fa-heart"></i> Made with love</span>
+                    </div>
+                </div>
+                <div class="guarantee-emoji">
+                    <span>😊</span>
+                    <span>👍</span>
+                    <span>❤️</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-logo">
+                        <i class="fas fa-utensils"></i>
+                        Foodie's Delight
+                    </h3>
+                    <p>Delivering happiness through delicious food since 2020.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="menu.html"><i class="fas fa-chevron-right"></i> Menu</a></li>
+                        <li><a href="cart.html"><i class="fas fa-chevron-right"></i> Cart</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            123 Food Street, New York, NY 10001
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            +1 (555) 123-4567
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            info@foodiesdelight.com
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Opening Hours</h4>
+                    <ul class="hours">
+                        <li><span>Mon - Fri:</span> 11:00 AM - 10:00 PM</li>
+                        <li><span>Saturday:</span> 12:00 PM - 11:00 PM</li>
+                        <li><span>Sunday:</span> 12:00 PM - 9:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Foodie's Delight. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/utils.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
